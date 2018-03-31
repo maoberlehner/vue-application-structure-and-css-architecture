@@ -1,0 +1,51 @@
+@import '../../scss/objects/layout.mixin';
+@import '../../scss/components/button.mixin';
+@import '../../scss/components/card.mixin';
+@import '../../scss/components/headline.mixin';
+@import '../../scss/components/text.mixin';
+
+@mixin contentList() {
+  > :not(:first-child) {
+    margin-top: 1em;
+  }
+}
+
+@mixin contentList__item() {
+  @include card();
+}
+
+@mixin contentList__wrap() {
+  @include layout();
+}
+
+@mixin contentList__figure() {
+  @include layout__item();
+
+  img {
+    display: block;
+  }
+}
+
+@mixin contentList__description() {
+  @include layout__item(max, 14em);
+}
+
+@mixin contentList__headline() {
+  @include headline(3);
+}
+
+@mixin contentList__text() {
+  @include text();
+
+  margin-top: 0.5em;
+}
+
+@mixin contentList__actions() {
+  @include layout__item();
+
+  align-self: center;
+}
+
+@mixin contentList__action() {
+  @include button();
+}

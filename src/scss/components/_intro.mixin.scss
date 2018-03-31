@@ -1,0 +1,13 @@
+@import 'text.mixin';
+
+@mixin intro() {
+  font-size: 1.25em;
+
+  > :not(:first-child) {
+    margin-top: 1.25em;
+  }
+
+  p {
+    line-height: 1.25;
+  }
+}

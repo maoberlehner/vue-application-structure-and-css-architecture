@@ -1,0 +1,22 @@
+@import '../settings/color';
+
+@mixin button() {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: none;
+  border-radius: 0.25em;
+  background-color: $color-primary;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &,
+  &:visited {
+    color: #fff;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: lighten($color-primary, 10%);
+  }
+}

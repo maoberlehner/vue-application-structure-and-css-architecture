@@ -1,0 +1,9 @@
+@import '../objects/layout.mixin';
+
+@mixin teaserList() {
+  @include layout();
+}
+
+@mixin teaserList__item() {
+  @include layout__item(auto, 16em);
+}

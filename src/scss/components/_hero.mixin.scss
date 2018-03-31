@@ -1,0 +1,27 @@
+@import '../objects/wrapper.mixin';
+@import 'button.mixin';
+@import 'headline.mixin';
+@import 'intro.mixin';
+
+@mixin hero() {
+  @include wrapper(s);
+
+  text-align: center;
+}
+
+@mixin hero__headline() {
+  @include headline(1);
+}
+
+@mixin hero__intro() {
+  @include intro();
+
+  margin-top: 1em;
+}
+
+@mixin hero__action() {
+  @include button();
+
+  margin-top: 1em;
+  font-size: 1.25em;
+}

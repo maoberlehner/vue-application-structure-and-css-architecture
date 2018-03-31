@@ -1,0 +1,24 @@
+@import '../../scss/components/button.mixin';
+@import '../../scss/components/card.mixin';
+@import '../../scss/components/headline.mixin';
+@import '../../scss/components/text.mixin';
+
+@mixin teaser() {
+  @include card();
+}
+
+@mixin teaser__headline() {
+  @include headline(3);
+}
+
+@mixin teaser__text() {
+  @include text();
+
+  margin-top: 1em;
+}
+
+@mixin teaser__action() {
+  @include button();
+
+  margin-top: 1em;
+}
