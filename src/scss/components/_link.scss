@@ -1,0 +1,5 @@
+@import 'link.mixin';
+
+.link {
+  @include link();
+}

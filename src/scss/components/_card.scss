@@ -1,0 +1,5 @@
+@import 'card.mixin';
+
+.card {
+  @include card();
+}

@@ -4,19 +4,19 @@
       &copy; Markus Oberlehner -
       <router-link
         :to="{ name: `home` }"
-        :class="`${$options.name}__link`">
+        class="link">
         Home
       </router-link>
       |
       <router-link
         :to="{ name: `article` }"
-        :class="`${$options.name}__link`">
+        class="link">
         Article
       </router-link>
       |
       <router-link
         :to="{ name: `list` }"
-        :class="`${$options.name}__link`">
+        class="link">
         List
       </router-link>
     </div>
@@ -29,10 +29,13 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import '{ .link } from ../../scss/components/link';
+</style>
+
 <style lang="scss" scoped>
 @import '../../scss/settings/color';
 @import '../../scss/objects/wrapper.mixin';
-@import '../../scss/components/link.mixin';
 
 .AppFooter {
   padding-top: 1em;
@@ -42,10 +45,6 @@ export default {
 
   &__wrapper {
     @include wrapper();
-  }
-
-  &__link {
-    @include link();
   }
 }
 </style>

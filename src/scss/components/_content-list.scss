@@ -1,0 +1,37 @@
+@import 'content-list.mixin';
+
+.contentList {
+  @include contentList();
+}
+
+.contentList__item {
+  @include contentList__item();
+}
+
+.contentList__wrap {
+  @include contentList__wrap();
+}
+
+.contentList__figure {
+  @include contentList__figure();
+}
+
+.contentList__description {
+  @include contentList__description();
+}
+
+.contentList__headline {
+  @include contentList__headline();
+}
+
+.contentList__text {
+  @include contentList__text();
+}
+
+.contentList__actions {
+  @include contentList__actions();
+}
+
+.contentList__action {
+  @include contentList__action();
+}

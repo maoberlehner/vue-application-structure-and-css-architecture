@@ -1,15 +1,13 @@
 <template>
   <div :class="$options.name">
-    <div :class="`${$options.name}__hero`">
-      <h1 :class="`${$options.name}__heroHeadline`">
+    <div class="hero">
+      <h1 class="hero__headline">
         Welcome!
       </h1>
 
-      <div :class="`${$options.name}__heroIntro`">
+      <div class="hero__intro">
         <p>
-          Lorem ipsum dolor sit amet, <router-link
-            :to="{ name: `list` }"
-            :class="`${$options.name}__link`">
+          Lorem ipsum dolor sit amet, <router-link :to="{ name: `list` }" class="link">
           consetetur</router-link> adipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </p>
@@ -17,19 +15,19 @@
 
       <router-link
         :to="{ name: `article` }"
-        :class="`${$options.name}__heroAction`">
+        class="hero__action">
         Click me!
       </router-link>
     </div>
 
-    <ul :class="`${$options.name}__teaserList`">
-      <li :class="`${$options.name}__teaserListItem`">
-        <div :class="`${$options.name}__teaser`">
-          <h3 :class="`${$options.name}__teaserHeadline`">
+    <ul :class="`teaserList ${$options.name}__teaserList`">
+      <li class="teaserList__item">
+        <div class="teaser">
+          <h3 class="teaser__headline">
             Article
           </h3>
 
-          <div :class="`${$options.name}__teaserText`">
+          <div class="teaser__text">
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
               eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed.
@@ -42,18 +40,18 @@
 
           <router-link
             :to="{ name: `article` }"
-            :class="`${$options.name}__teaserAction`">
+            class="teaser__action">
             Read more
           </router-link>
         </div>
       </li>
-      <li :class="`${$options.name}__teaserListItem`">
-        <div :class="`${$options.name}__teaser`">
-          <h3 :class="`${$options.name}__teaserHeadline`">
+      <li class="teaserList__item">
+        <div class="teaser">
+          <h3 class="teaser__headline">
             List
           </h3>
 
-          <div :class="`${$options.name}__teaserText`">
+          <div class="teaser__text">
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
               eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed.
@@ -66,7 +64,7 @@
 
           <router-link
             :to="{ name: `list` }"
-            :class="`${$options.name}__teaserAction`">
+            class="teaser__action">
             Read more
           </router-link>
         </div>
@@ -81,68 +79,29 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../../scss/components/hero.mixin';
-@import '../../scss/components/link.mixin';
-@import '../../scss/components/teaser-list.mixin';
-@import '../../scss/components/teaser.mixin';
+<style lang="scss">
+@import '{
+  .hero,
+  .hero__headline,
+  .hero__intro,
+  .hero__action,
+} from ../../scss/components/hero';
+@import '{ .link } from ../../scss/components/link';
+@import '{
+  .teaser,
+  .teaser__headline,
+  .teaser__text,
+  .teaser__action
+} from ../../scss/components/teaser';
+@import '{ .teaserList, .teaserList__item } from ../../scss/components/teaser-list';
+</style>
 
+<style lang="scss" scoped>
 .PageHome {
   $section-spacing: 3em;
 
-  &__link {
-    @include link();
-  }
-
-  /**
-   * Hero
-   */
-  &__hero {
-    @include hero();
-  }
-
-  &__heroHeadline {
-    @include hero__headline();
-  }
-
-  &__heroIntro {
-    @include hero__intro();
-  }
-
-  &__heroAction {
-    @include hero__action();
-  }
-
-  /**
-   * TeaserList
-   */
   &__teaserList {
-    @include teaserList();
-
     margin-top: $section-spacing;
-  }
-
-  &__teaserListItem {
-    @include teaserList__item();
-  }
-
-  /**
-   * Teaser
-   */
-  &__teaser {
-    @include teaser();
-  }
-
-  &__teaserHeadline {
-    @include teaser__headline();
-  }
-
-  &__teaserText {
-    @include teaser__text();
-  }
-
-  &__teaserAction {
-    @include teaser__action();
   }
 }
 </style>

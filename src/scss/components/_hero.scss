@@ -1,0 +1,17 @@
+@import 'hero.mixin';
+
+.hero {
+  @include hero();
+}
+
+.hero__headline {
+  @include hero__headline();
+}
+
+.hero__intro {
+  @include hero__intro();
+}
+
+.hero__action {
+  @include hero__action();
+}

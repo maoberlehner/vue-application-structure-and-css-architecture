@@ -1,0 +1,9 @@
+@import 'teaser-list.mixin';
+
+.teaserList {
+  @include teaserList();
+}
+
+.teaserList__item {
+  @include teaserList__item();
+}

@@ -1,0 +1,5 @@
+@import 'intro.mixin';
+
+.intro {
+  @include intro();
+}

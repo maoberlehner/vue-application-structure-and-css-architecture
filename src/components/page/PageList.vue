@@ -1,11 +1,11 @@
 <template>
   <div :class="$options.name">
-    <div :class="`${$options.name}__hero`">
-      <h1 :class="`${$options.name}__heroHeadline`">
+    <div class="hero">
+      <h1 class="hero__headline">
         List
       </h1>
 
-      <div :class="`${$options.name}__heroIntro`">
+      <div class="hero__intro">
         <p>
           This is an example for a list of content (e.g products).
           consetetur sadipscing elitr, sed diam nonumy irmod tempor
@@ -14,88 +14,88 @@
       </div>
     </div>
 
-    <ul :class="`${$options.name}__contentList`">
-      <li :class="`${$options.name}__contentListItem`">
-        <div :class="`${$options.name}__contentListWrap`">
-          <div :class="`${$options.name}__contentListFigure`">
+    <ul :class="`contentList ${$options.name}__contentList`">
+      <li class="contentList__item">
+        <div class="contentList__wrap">
+          <div class="contentList__figure">
             <img
               src="http://via.placeholder.com/76x76"
               alt="Placeholder image">
           </div>
-          <div :class="`${$options.name}__contentListDescription`">
-            <h3 :class="`${$options.name}__contentListHeadline`">Lorem Ipsum</h3>
-            <div :class="`${$options.name}__contentListText`">
+          <div class="contentList__description">
+            <h3 class="contentList__headline">Lorem Ipsum</h3>
+            <div class="contentList__text">
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor inviduntt.
               </p>
             </div>
           </div>
-          <div :class="`${$options.name}__contentListActions`">
-            <button :class="`${$options.name}__contentListAction`">Buy me!</button>
+          <div class="contentList__actions">
+            <button class="contentList__action">Buy me!</button>
           </div>
         </div>
       </li>
-      <li :class="`${$options.name}__contentListItem`">
-        <div :class="`${$options.name}__contentListWrap`">
-          <div :class="`${$options.name}__contentListFigure`">
+      <li class="contentList__item">
+        <div class="contentList__wrap">
+          <div class="contentList__figure">
             <img
               src="http://via.placeholder.com/76x76"
               alt="Placeholder image">
           </div>
-          <div :class="`${$options.name}__contentListDescription`">
-            <h3 :class="`${$options.name}__contentListHeadline`">Lorem Ipsum</h3>
-            <div :class="`${$options.name}__contentListText`">
+          <div class="contentList__description">
+            <h3 class="contentList__headline">Lorem Ipsum</h3>
+            <div class="contentList__text">
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor inviduntt.
               </p>
             </div>
           </div>
-          <div :class="`${$options.name}__contentListActions`">
-            <button :class="`${$options.name}__contentListAction`">Buy me!</button>
+          <div class="contentList__actions">
+            <button class="contentList__action">Buy me!</button>
           </div>
         </div>
       </li>
-      <li :class="`${$options.name}__contentListItem`">
-        <div :class="`${$options.name}__contentListWrap`">
-          <div :class="`${$options.name}__contentListFigure`">
+      <li class="contentList__item">
+        <div class="contentList__wrap">
+          <div class="contentList__figure">
             <img
               src="http://via.placeholder.com/76x76"
               alt="Placeholder image">
           </div>
-          <div :class="`${$options.name}__contentListDescription`">
-            <h3 :class="`${$options.name}__contentListHeadline`">Lorem Ipsum</h3>
-            <div :class="`${$options.name}__contentListText`">
+          <div class="contentList__description">
+            <h3 class="contentList__headline">Lorem Ipsum</h3>
+            <div class="contentList__text">
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor inviduntt.
               </p>
             </div>
           </div>
-          <div :class="`${$options.name}__contentListActions`">
-            <button :class="`${$options.name}__contentListAction`">Buy me!</button>
+          <div class="contentList__actions">
+            <button class="contentList__action">Buy me!</button>
           </div>
         </div>
       </li>
-      <li :class="`${$options.name}__contentListItem`">
-        <div :class="`${$options.name}__contentListWrap`">
-          <div :class="`${$options.name}__contentListFigure`">
+      <li class="contentList__item">
+        <div class="contentList__wrap">
+          <div class="contentList__figure">
             <img
               src="http://via.placeholder.com/76x76"
               alt="Placeholder image">
           </div>
-          <div :class="`${$options.name}__contentListDescription`">
-            <h3 :class="`${$options.name}__contentListHeadline`">Lorem Ipsum</h3>
-            <div :class="`${$options.name}__contentListText`">
+          <div class="contentList__description">
+            <h3 class="contentList__headline">Lorem Ipsum</h3>
+            <div class="contentList__text">
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor inviduntt.
               </p>
             </div>
           </div>
-          <div :class="`${$options.name}__contentListActions`">
-            <button :class="`${$options.name}__contentListAction`">Buy me!</button>
+          <div class="contentList__actions">
+            <button class="contentList__action">Buy me!</button>
           </div>
         </div>
       </li>
@@ -109,67 +109,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../../scss/components/content-list.mixin';
-@import '../../scss/components/hero.mixin';
+<style lang="scss">
+@import '{
+  .contentList,
+  .contentList__item,
+  .contentList__wrap,
+  .contentList__figure,
+  .contentList__description,
+  .contentList__headline,
+  .contentList__text,
+  .contentList__actions,
+  .contentList__action,
+} from ../../scss/components/content-list';
+@import '{
+  .hero,
+  .hero__headline,
+  .hero__intro,
+} from ../../scss/components/hero';
+</style>
 
+<style lang="scss" scoped>
 .PageList {
   $section-spacing: 3em;
 
-  /**
-   * Hero
-   */
-  &__hero {
-    @include hero();
-  }
-
-  &__heroHeadline {
-    @include hero__headline();
-  }
-
-  &__heroIntro {
-    @include hero__intro();
-  }
-
-  /**
-   * ContentList
-   */
   &__contentList {
-    @include contentList();
-
     margin-top: $section-spacing;
-  }
-
-  &__contentListItem {
-    @include contentList__item();
-  }
-
-  &__contentListWrap {
-    @include contentList__wrap();
-  }
-
-  &__contentListFigure {
-    @include contentList__figure();
-  }
-
-  &__contentListDescription {
-    @include contentList__description();
-  }
-
-  &__contentListHeadline {
-    @include contentList__headline();
-  }
-
-  &__contentListText {
-    @include contentList__text();
-  }
-
-  &__contentListActions {
-    @include contentList__actions();
-  }
-
-  &__contentListAction {
-    @include contentList__action();
   }
 }
 </style>

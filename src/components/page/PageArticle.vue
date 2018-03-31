@@ -1,8 +1,8 @@
 <template>
   <div :class="$options.name">
-    <h1 :class="`${$options.name}__headline`">Article</h1>
+    <h1 class="headline--1">Article</h1>
 
-    <div :class="`${$options.name}__intro`">
+    <div :class="`intro ${$options.name}__intro`">
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -11,7 +11,7 @@
       </p>
     </div>
 
-    <div :class="`${$options.name}__text`">
+    <div :class="`text ${$options.name}__text`">
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -63,25 +63,19 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import '{ .headline--1 } from ../../scss/components/headline';
+@import '{ .intro } from ../../scss/components/intro';
+@import '{ .text } from ../../scss/components/text';
+</style>
+
 <style lang="scss" scoped>
-@import '../../scss/components/headline.mixin';
-@import '../../scss/components/intro.mixin';
-@import '../../scss/components/text.mixin';
-
 .PageArticle {
-  &__headline {
-    @include headline(1);
-  }
-
   &__intro {
-    @include intro();
-
     margin-top: 1.5em;
   }
 
   &__text {
-    @include text();
-
     margin-top: 1.5em;
   }
 }

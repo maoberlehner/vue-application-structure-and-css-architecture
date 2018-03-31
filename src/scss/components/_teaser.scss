@@ -1,0 +1,17 @@
+@import 'teaser.mixin';
+
+.teaser {
+  @include teaser();
+}
+
+.teaser__headline {
+  @include teaser__headline();
+}
+
+.teaser__text {
+  @include teaser__text();
+}
+
+.teaser__action {
+  @include teaser__action();
+}

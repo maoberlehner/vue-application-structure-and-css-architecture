@@ -1,0 +1,13 @@
+@import 'headline.mixin';
+
+.headline--1 {
+  @include headline(1);
+}
+
+.headline--2 {
+  @include headline(2);
+}
+
+.headline--3 {
+  @include headline(3);
+}

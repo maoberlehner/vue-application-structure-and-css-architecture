@@ -1,0 +1,5 @@
+@import 'text.mixin';
+
+.text {
+  @include text();
+}
