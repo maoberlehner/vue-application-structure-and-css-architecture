@@ -2,37 +2,29 @@
   <footer :class="$options.name">
     <div :class="`${$options.name}__wrapper`">
       &copy; Markus Oberlehner -
-      <router-link
-        :to="{ name: `home` }"
-        :class="`${$options.name}__link`">
-        Home
-      </router-link>
+      <app-link :to="{ name: `home` }">Home</app-link>
       |
-      <router-link
-        :to="{ name: `article` }"
-        :class="`${$options.name}__link`">
-        Article
-      </router-link>
+      <app-link :to="{ name: `article` }">Article</app-link>
       |
-      <router-link
-        :to="{ name: `list` }"
-        :class="`${$options.name}__link`">
-        List
-      </router-link>
+      <app-link :to="{ name: `list` }">List</app-link>
     </div>
   </footer>
 </template>
 
 <script>
+import AppLink from './AppLink.vue'
+
 export default {
   name: `AppFooter`,
+  components: {
+    AppLink,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../../scss/settings/color';
 @import '../../scss/objects/wrapper.mixin';
-@import '../../scss/components/link.mixin';
 
 .AppFooter {
   padding-top: 1em;
@@ -42,10 +34,6 @@ export default {
 
   &__wrapper {
     @include wrapper();
-  }
-
-  &__link {
-    @include link();
   }
 }
 </style>

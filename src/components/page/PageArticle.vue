@@ -1,17 +1,17 @@
 <template>
   <div :class="$options.name">
-    <h1 :class="`${$options.name}__headline`">Article</h1>
+    <app-headline>Article</app-headline>
 
-    <div :class="`${$options.name}__intro`">
+    <app-intro :class="`${$options.name}__intro`">
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren.
       </p>
-    </div>
+    </app-intro>
 
-    <div :class="`${$options.name}__text`">
+    <app-text :class="`${$options.name}__text`">
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -24,7 +24,7 @@
         sit amet.
       </p>
 
-      <h2>Dolor sit</h2>
+      <app-headline :level="2">Dolor sit</app-headline>
 
       <p>
         No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
@@ -34,7 +34,7 @@
         sanctus est Lorem ipsum dolor sit amet.
       </p>
 
-      <h2>Lorem sit</h2>
+      <app-headline :level="2">Lorem sit</app-headline>
 
       <p>
         Yo ue takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
@@ -53,35 +53,29 @@
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
         sit amet.
       </p>
-    </div>
+    </app-text>
   </div>
 </template>
 
 <script>
+import AppHeadline from '../app/AppHeadline.vue';
+import AppIntro from '../app/AppIntro.vue';
+import AppText from '../app/AppText.vue';
+
 export default {
   name: `PageArticle`,
+  components: {
+    AppHeadline,
+    AppIntro,
+    AppText,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../../scss/components/headline.mixin';
-@import '../../scss/components/intro.mixin';
-@import '../../scss/components/text.mixin';
-
 .PageArticle {
-  &__headline {
-    @include headline(1);
-  }
-
-  &__intro {
-    @include intro();
-
-    margin-top: 1.5em;
-  }
-
+  &__intro,
   &__text {
-    @include text();
-
     margin-top: 1.5em;
   }
 }
