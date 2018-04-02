@@ -25,11 +25,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '~normalize.css';
-@import '~reset-css/_reset.scss';
-</style>
-
 <style lang="scss" scoped>
 @import '../../scss/objects/wrapper.mixin';
 
